@@ -2,7 +2,8 @@ import argparse
 import os
 import torch
 import logging
-from path import Path
+#from path import Path
+from pathlib import Path
 from utils import custom_transform
 from dataset.KITTI_dataset import KITTI
 from model import DeepVIO
@@ -46,11 +47,14 @@ def main():
 
     # Create Dir
     experiment_dir = Path('./results')
-    experiment_dir.mkdir_p()
+    #experiment_dir.mkdir_p()
+    experiment_dir.mkdir(exist_ok=True)
     file_dir = experiment_dir.joinpath('{}/'.format(args.experiment_name))
-    file_dir.mkdir_p()
+    #file_dir.mkdir_p()
+    file_dir.mkdir(exist_ok=True)
     result_dir = file_dir.joinpath('files/')
-    result_dir.mkdir_p()
+    #result_dir.mkdir_p()
+    result_dir.mkdir(exist_ok=True)
     
     # GPU selections
     str_ids = args.gpu_ids.split(',')

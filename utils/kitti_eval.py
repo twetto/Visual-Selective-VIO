@@ -213,7 +213,7 @@ def plotPath_2D(seq, poses_gt_mat, poses_est_mat, plot_path_dir, decision, speed
 
     plt.title('2D path')
     png_title = "{}_path_2d".format(seq)
-    plt.savefig(plot_path_dir + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
+    plt.savefig(str(plot_path_dir) + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
     plt.close()
 
     # Plot decision hearmap
@@ -237,7 +237,7 @@ def plotPath_2D(seq, poses_gt_mat, poses_est_mat, plot_path_dir, decision, speed
 
     plt.title('decision heatmap with window size {}'.format(window_size))
     png_title = "{}_decision_smoothed".format(seq)
-    plt.savefig(plot_path_dir + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
+    plt.savefig(str(plot_path_dir) + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
     plt.close()
 
     # Plot the speed map
@@ -261,7 +261,7 @@ def plotPath_2D(seq, poses_gt_mat, poses_est_mat, plot_path_dir, decision, speed
 
     plt.title('speed heatmap')
     png_title = "{}_speed".format(seq)
-    plt.savefig(plot_path_dir + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
+    plt.savefig(str(plot_path_dir) + "/" + png_title + ".png", bbox_inches='tight', pad_inches=0.1)
     plt.close()
 
 
